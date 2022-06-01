@@ -28,13 +28,10 @@ ul a {
     font-weight: 700;
 }
 
-.agora {
-    font-weight: 600;
-}
 
 .banner {
     height: 100vh;
-    background-image: url("silvia.jpg");
+    background-image: url("../assets/img/silvia.jpg");
     background-size: cover;
     opacity: 70%;
 }
