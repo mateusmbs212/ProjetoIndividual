@@ -8,7 +8,7 @@
 .container {
    width: 100%;
    height: 100vh; 
-   background: url(../assets/img/image.jpg);
+   background: url(../img/image.jpg);
    background-position: center;
    background-size: cover;
 }
@@ -24,41 +24,41 @@
 }
 
 .container .header {
-    width: 100%;
-    height: 150px;
-    color: white;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  height: 10vh;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 
 
 .container .header .logo {
-    font-size: 30px;
-    margin-left: 40px;
+  font-size: 30px;
+  margin-left: 40px;
 }
 
 .container .header ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    margin-right: 40px;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  margin-right: 40px;
+  margin-top: 10px;
 }
 
 .container .header ul li {
-    list-style: none;
-    text-decoration: none;
-    margin-right: 20px;
-    color: white;
+  list-style: none;
+  text-decoration: none;
+  margin-right: 20px;
+  color: white;
 }
 
 .container .header ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 21px;
+  color: white;
+  text-decoration: none;
+  font-size: 21px;
 }
 
 .container  .conteudo {
@@ -103,12 +103,23 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  background: url(../assets/img/nissan.jpg);
-  background-position: center;
-  background-size: cover;
-
+  background-color: black;
 }
 
+.container2 .esquerda {
+  width: 50%;
+  height: 100%;
+  background: url(../img/nissan.jpg);
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(0 0, 53% 0, 100% 100%, 0 100%);
+
+}
+.container2 .direita {
+  width: 50%;
+  height: 100%;
+
+}
 .container2 .boxsobremim {
   display: flex;
   position: absolute;
@@ -131,126 +142,7 @@
   font-weight: 300;
   color: white;
 }
-.main-cadastro {
-  height: 100vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
 
-.cadastro-esquerda {
-  width: 40vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-left: 170px;
-}
-.cadastro-esquerda h2{
-  font-size: 20pt;
-  color: white;
-}
-
-.cadastro-esquerda h2 span{
-  font-size: 25pt;
-  color: #660066;
-}
-
-
-
-.cadastro-direita {
-  width: 50%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-cadastro {
-  width: 40%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0px 15px;
-  background-color: #12111a;
-  border-radius: 20px;
-  box-shadow: 0px 10px 40px #00000056;
-  border-top: 1px black solid;
-  border-bottom: 1px solid black;
-  border-left: 1px black solid;
-  border-right: 1px black solid;
-  color: black;
-}
-
-.card-cadastro  h1 {
-  font-weight: 800;
-  margin: 0;
-  font-size: 25px;
-  text-transform: uppercase;
-  color: #808080;
-}
-
-.textfield {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  margin: 6px 0px;
-  width: 100%;
-  
-}
-
-.textfield > input {
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  padding: 8px;
-  background-color: #3b4e57;
-  color: white;
-  font-size: 10pt;
-  margin: 2px;
-}
-
-
-
-::placeholder {
-  color: #000;
-  opacity: 0.5;
-}
-
-.textfield > label {
-  color: white;
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 11pt;
-}
-
-.textfield > input::placeholder {
-  color: white;
-}
-
-.btn-cadastro {
-  width: 100%;
-  padding: 7px 12px;
-  margin: 5px;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: white;
-  background-color: #808080;
-  box-shadow: 5px 5px 5px black;
-  cursor: pointer;
-  border-top: 1px black solid;
-  border-bottom: 1px solid black;
-  border-left: 1px black solid;
-  border-right: 1px black solid;
-}
 
 /*Login*/
 .main-login {

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDM Cars</title>
+    <link rel="stylesheet" href="../assets/css/cadastro.css">
+</head>
+
+<body>
+    <div class="container">
+    
+        <div class="header">
+            <div class="logo">
+                <h1>JDM Cars</h1>
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="saiba.html">Saiba mais</a></li>
+                <li><a href="sobre.html">Caça Palavras</a></li>
+                <li><a>|</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><a href="">Cadastro</a></li>
+            </ul>
+        </div>
+    
+        <div class="main-cadastro">
+            <div class="cadastro-esquerda">
+              <img src="../assets/img/race-car-animate.svg" alt="">
+            </div>
+            <div class="cadastro-direita">
+              <div class="card-cadastro">
+                <h1>Cadastro</h1>
+                <div class="textfield">
+                  <label for="nome">Nome</label>
+                  <input
+                    type="text"
+                    name="nome"
+                    placeholder="Digite aqui o seu nome"
+                    id="iptNome"
+                  />
+                </div>
+                <div class="textfield">
+                  <label for="email">Email</label>
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="Digite aqui o seu email"
+                    id="iptEmail"
+                  />
+                </div>
+                <div class="textfield">
+                  <label for="tel">Telefone</label>
+                  <input
+                    type="text"
+                    name="tel"
+                    placeholder="Coloque seu telefone"
+                    id="iptTelefone"
+                  />
+                </div>
+                <div class="textfield">
+                  <label for="senha">Senha</label>
+                  <input
+                    type="password"
+                    name="senha"
+                    placeholder="Digite aqui a sua senha"
+                    id="iptSenha"
+                  />
+                </div>
+                <div class="textfield">
+                  <label for="senha">Confirmação de senha</label>
+                  <input
+                    type="password"
+                    name="senha"
+                    placeholder="Digite novamente a sua senha"
+                    id="iptSenha2"
+                  />
+                </div>
+                <button class="btn-cadastro" onclick="cadastrar()">
+                  Cadastrar
+                </button>
+                <div id="teste" style="color: white;"></div>
+                <div id="div_aguardar" class="loading-div" style="display: none">
+                  Carregando
+                </div>
+                <div class="card_erro" id="cardErro" style="color: #fff">
+                  <span id="mensagem_erro"></span>
+                </div>
+                <div id="div_erros_login"></div>
+              </div>
+            </div>
+          </div> 
+          
