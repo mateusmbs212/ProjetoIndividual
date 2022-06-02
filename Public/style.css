@@ -73,11 +73,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-style: helvetica;
 }
 
 .conteudo a {
   padding: 7px 14px;
-  background-color: #800080;
+  background-color:  #808080;
   text-decoration: none;
   color: white;
   margin: 50px 0;
@@ -85,121 +86,287 @@
   border-radius: 20px;
 }
 
+.conteudo p {
+  font-size: 25px;
+  font-weight: 300;
+}
+
 .container .conteudo h1 {
     margin-bottom: 25px;
+ 
 }
+
 
 .container2{
   width: 100%;
   height: 100vh;
-  background-color: black;
   justify-content: center;
   align-items: center;
   display: flex;
+  background: url(../assets/img/nissan.jpg);
+  background-position: center;
+  background-size: cover;
+
 }
 
-.boxsobremim {
+.container2 .boxsobremim {
   display: flex;
+  position: absolute;
   color: black;
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-color:  #800080;
+  flex-direction: column;
   /* margin-left: 25%;
   margin-top: 50%; */
   width: 40%;
   height: 70%;
   border-radius: 30px;
-}
-/*login*/
-
-.banner .card {
-    height: 450px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-top: 20px;
+  color: white;
 }
 
-.card {
-    margin-top: 20px;
-
+.boxsobremim p {
+  margin-top: 60px;
+  font-size: 25px;
+  font-weight: 300;
+  color: white;
+}
+.main-cadastro {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.btn {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 10px;
-    border: 0;
-    font-weight: 600;
-    border-radius: 4px;
-    font-size: 18px;
-    color: white;
-    padding: 10px 15px;
-    background-color: #800080;
-    cursor: pointer;
+.cadastro-esquerda {
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 170px;
+}
+.cadastro-esquerda h2{
+  font-size: 20pt;
+  color: white;
 }
 
-.card input {
-    height: 30px;
-    border: 1px solid #800080;
-    border-radius: 4px;
+.cadastro-esquerda h2 span{
+  font-size: 25pt;
+  color: #660066;
 }
 
-/* FORMULARIO */
 
-.alerta_erro{
-    display: flex;
-    justify-content: flex-end;
-  }
+
+.cadastro-direita {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-cadastro {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 15px;
+  background-color: #12111a;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #00000056;
+  border-top: 1px black solid;
+  border-bottom: 1px solid black;
+  border-left: 1px black solid;
+  border-right: 1px black solid;
+  color: black;
+}
+
+.card-cadastro  h1 {
+  font-weight: 800;
+  margin: 0;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #808080;
+}
+
+.textfield {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 6px 0px;
+  width: 100%;
   
-  .card_erro {
-    display: none;
-    color: black;
-    width: 230px;
-    position: fixed;
-    border-radius: 4px;
-    border: #800080 3px solid;
-    padding: 10px;
-    margin-right: 10%;
-  }
+}
+
+.textfield > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: #3b4e57;
+  color: white;
+  font-size: 10pt;
+  margin: 2px;
+}
+
+
+
+::placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+.textfield > label {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 11pt;
+}
+
+.textfield > input::placeholder {
+  color: white;
+}
+
+.btn-cadastro {
+  width: 100%;
+  padding: 7px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: white;
+  background-color: #808080;
+  box-shadow: 5px 5px 5px black;
+  cursor: pointer;
+  border-top: 1px black solid;
+  border-bottom: 1px solid black;
+  border-left: 1px black solid;
+  border-right: 1px black solid;
+}
+
+/*Login*/
+.main-login {
+  height: 90vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #F6F8FA;
+}
+
+
+
+
+.login-direita {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-login {
+  width: 40%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 15px;
+  background-color: #12111a;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #00000056;
+  border-top: 1px black solid;
+  border-bottom: 1px solid black;
+  border-left: 1px black solid;
+  border-right: 1px black solid;
+}
+
+.top{
+  margin-top: 12%;
+}
+
+.card-login  h1 {
+  font-weight: 800;
+  margin: 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #808080;
+}
+
+.textfield {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0px;
+  width: 100%;
   
-  .card_erro #mensagem_erro{
-    font-weight: 500;
-    font-size: 20px;
-  }
   
-  .formulario .tipo_campo {
-    font-size: 20px;
-    font-weight: 600 !important;
-  }
+}
+
+.textfield > label {
+  color: #f0ffffde;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.textfield > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #2f3e46;
+  color: white;
+  font-size: 12pt;
+  box-shadow: px 5px 5px black;
+  box-sizing: border-box;
+  border-bottom: 2px solid black;
+}
+
+::placeholder {
+  color: #000;
+  opacity: 0.5;
+}
+
+
+.textfield > input::placeholder {
+  color: white;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 16px 0px;
+  margin: 25px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: white;
+  background-color: #808080;
+  box-shadow: 5px 5px 5px black;
+  cursor: pointer;
   
-  .formulario {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  input {
-    margin-bottom: 10px;
-    border: 2px solid #32b9cd;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-  }
-  
-  .btn {
-    font-family: "Barlow", sans-serif;
-    border: 0;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 10px 15px;
-    color: white;
-    background-color: #800080;;
-    width: 120px;
-    align-self: center;
-    margin-top: 5px;
-  }
-    
+}
+
+.card-login .goCadastro{
+  color: #f0ffffde;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
