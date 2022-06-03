@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/assets/css/cadastro.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <h1>JDM Cars</h1>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="saiba.html">Saiba mais</a></li>
+        <li><a href="sobre.html">Caça Palavras</a></li>
+        <li><a>|</a></li>
+        <li><a href="login.html">login</a></li>
+        <li><a href="">Cadastro</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="esquerda">
+        
+      </div>
+      <div class="direita">
+        <form>
+          <h1>Cadastre-se</h1>
+          <div class="campo">
+            <label for="Nome">Nome</label>
+            <input type="text" placeholder="Digite seu nome" id="iptNome">
+          </div>
+          <div class="campo">
+            <label for="Email">Email</label>
+            <input type="email" placeholder="Digite seu email" id="iptEmail">
+          </div>
+          <div class="campo">
+            <label for="senha">Senha</label>
+            <input type="password" placeholder="Digite sua senha" id="iptSenha">
+          </div>
+          <div class="campo">
+            <label for="Senha">Confirmação da senha</label>
+            <input type="password" placeholder="Confirme sua senha" id="iptSenha2">
+          </div>
+          <button class="btn-cadastro" onclick="cadastrar()">
+            Cadastrar
+          </button>
+          <div id="teste" style="color: white;"></div>
+          <div id="div_aguardar" class="loading-div" style="display: none">
+            Carregando
+          </div>
+          <div class="card_erro" id="cardErro" style="color: #fff">
+            <span id="mensagem_erro"></span>
+          </div>
+          <div id="div_erros_login"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+  function cadastrar() {
+    // aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = iptNome.value;
+    var emailVar = iptEmail.value;
+    var senhaVar = iptSenha.value;
+    var confirmacaoSenhaVar = iptSenha2.value;
+
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == ""
+    ) {
+      cardErro.style.display = "block";
+      teste.innerHTML = 'Preencha todos os campos para prosseguir!';
+
+      // finalizarAguardar();
+      return false;
+    }
+    // else {
+    //   setInterval(sumirMensagem, 5000);
+    // }
+
+    if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+      cardErro.style.display = "block";
+      teste.innerHTML = 'Ops, e-mail inválido! Verifique e tente novamente.';
+      // finalizarAguardar();
+      return false;
+    } 
+    // else {
+    //   setInterval(sumirMensagem, 5000);
+    // }
+
+    if (senhaVar != confirmacaoSenhaVar) {
+      cardErro.style.display = "block";
+      teste.innerHTML = 'As senhas inseridas devem ser iguais para prosseguir!';
+      // finalizarAguardar();
+      return false;
+    } 
+    // else {
+    //   setInterval(sumirMensagem, 5000);
+    // }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+          teste.innerHTML = 'Cadastro realizado com sucesso!';
+          window.location = "login.html";
+          // limparFormulario();
+          // finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro2!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  // function sumirMensagem() {
+  //   cardErro.style.display = "none";
+  // }
+</script>
+</body>
+
+</html>
