@@ -107,7 +107,7 @@
 }
 
 .container2 .esquerda {
-  width: 50%;
+  width: 70%;
   height: 100%;
   background: url(../img/nissan.jpg);
   background-position: center;
@@ -116,7 +116,7 @@
 
 }
 .container2 .direita {
-  width: 50%;
+  width: 60%;
   height: 100%;
 
 }

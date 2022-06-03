@@ -57,11 +57,13 @@ display: flex;
 }
 
 .container .content .esquerda {
-width: 50%;
-height: 100%;
+    width: 80%;
+    height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+background: url(../img/mazda.jpg);
+clip-path: polygon(0% 0%, 80% 0, 100% 50%, 84% 100%, 0% 100%);
 }
 
 .container  .content .direita {
@@ -73,7 +75,7 @@ align-items: center;
 }
 
 .container  .content .direita form {
-height: 70%;
+height: 55%;
 width: 50%;
 background-color: grey;
 display: flex;
@@ -87,6 +89,7 @@ border-bottom: 1px solid black;
 border-left: 1px black solid;
 border-right: 1px black solid;
 color: black;
+box-shadow: 0px 10px 40px #928f8f56;
 }
 
 .direita h1 {
@@ -94,7 +97,7 @@ font-weight: 800;
 margin: 0;
 font-size: 25px;
 text-transform: uppercase;
-color: black;
+color: white;
 margin-bottom: 50px;
 }
 
