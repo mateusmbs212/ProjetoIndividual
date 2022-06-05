@@ -11,9 +11,6 @@
 
 <body>
     <div class="container">
-    
-     
-    
         <div class="header">
             <div class="logo">
                 <h1>JDM Cars</h1>
@@ -27,26 +24,110 @@
                 <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
         </div>
+
+    <div class="conteudo">
+        <center>
+        <h1 style="color:white; display: block;" id="Ms">Mazda Rx7</h1>
+        <h1 style="color:white; display: none;"id="Ns">Nissan Skyline R34</h1>
+        <h1 style="color:white; display: none;" id="Nz">Nissan 350z</h1>
+        <h1 style="color:white; display: none;" id="t">Toyota Supra</h1>
+        <h1 style="color:white; display: none;" id="s">Silvia s15</h1>
+         </center>
+        <div class="slides">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <input type="radio" name="slide" id="slide5">
+
+            <div class="slide s1">
+                <a href="Mazda.html">
+                <img src="/assets/img/466893.jpg" alt="">
+                 </a>
+            </div>
+
+            <div class="slide">
+                <img src="/assets/img/skylineR34.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="/assets/img/350.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="/assets/img/supra.jpg" alt="">
+            </div>
+            <div class="slide">
+                <a href="silvia.html" target="_blank">
+                <img src="/assets/img/silvia15.jpg" alt="">
+            </a>
+            </div>
+        </div>
+
+        <div class="navegation">
+            <label class="bar" for="slide1" id="sl1" onclick="bt1()"></label>
+            <label class="bar" for="slide2" id="sl2" onclick="bt2()"></label>
+            <label class="bar" for="slide3" id="sl3" onclick="bt3()"></label>
+            <label class="bar" for="slide4" id="sl4" onclick="bt4()"></label>
+            <label class="bar" for="slide5" id="sl5" onclick="bt5()"></label>
+        </div>
+    </div>
        
-                <ul class="slider">
-                    <li>
-                        <input type="radio" id="slide1" name="slide" checked>
-                        <label for="slide1"></label>
-                          <img src="/assets/img/evo.jpg" />
-                    </li>
-                    <li>
-                        <input type="radio" id="slide2" name="slide">
-          <label for="slide2"></label>
-                          <img src="/assets/img/nissan.jpg" />
-                    </li>
-                    <li>
-                        <input type="radio" id="slide3" name="slide">
-          <label for="slide3"></label>
-                          <img src="/assets/img/silvia.jpg" />
-                    </li>
-                </ul>
-  
     
 </body>
 
 </html>
+<script>
+    function bt1() {
+        if (sl1.value == Ms.value) {
+        Ms.style.display = "block";
+        Ns.style.display = "none";
+        Nz.style.display = "none";
+        t.style.display = "none";
+        s.style.display = "none";
+    }
+    }
+
+    function bt2() {
+        if (sl2.value == Ns.value) {
+        Ms.style.display = "none";
+        Ns.style.display = "block";
+        Nz.style.display = "none";
+        t.style.display = "none";
+        s.style.display = "none";
+    } 
+    }
+
+    function bt3() {
+        if (sl3.value == Nz.value) {
+        Ms.style.display = "none";
+        Ns.style.display = "none";
+        Nz.style.display = "block";
+        t.style.display = "none";
+        s.style.display = "none";
+    } 
+    }
+
+    function bt4() {
+        if (sl4.value == t.value) {
+        Ms.style.display = "none";
+        Ns.style.display = "none";
+        Nz.style.display = "none";
+        t.style.display = "block";
+        s.style.display = "none";
+    } 
+    }
+
+    function bt5() {
+        if (sl5.value == s.value) {
+        Ms.style.display = "none";
+        Ns.style.display = "none";
+        Nz.style.display = "none";
+        t.style.display = "none";
+        s.style.display = "block";
+    } 
+    }
+     
+
+   
+</script>
