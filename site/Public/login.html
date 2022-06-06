@@ -5,7 +5,7 @@
           <meta charset="UTF-8">
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Document</title>
+          <title>Login</title>
           <link rel="stylesheet" href="/assets/css/login.css">
         </head>
         
@@ -18,7 +18,7 @@
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="saiba.html">Saiba mais</a></li>
-                <li><a href="caca.html">Caça Palavras</a></li>
+                <li><a href="votacao.html">Votação</a></li>
                 <li><a>|</a></li>
                 <li><a href="">login</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
@@ -40,9 +40,9 @@
                     <label for="senha">Senha</label>
                     <input type="password" placeholder="Digite sua senha" id="iptSenha">
                   </div>
-                  <button class="btn-login" onclick="entrar()">
+                  <span class="btn-login" onclick="entrar()">
                     login
-                  </button>
+                  </span>
                   <a href="cadastro.html" class="goCadastro"
                   >Não possuí cadastro? Venha se cadastrar</a>
                   <div id="teste" style="color: white;"></div>
@@ -60,7 +60,7 @@
 </html>
           <script>
             function entrar() {
-              aguardar();
+              // aguardar();
       
               var emailVar = iptEmail.value;
               var senhaVar = iptSenha.value;
@@ -111,9 +111,9 @@
                       sessionStorage.NOME_USUARIO = json.nome;
                       sessionStorage.ID_USUARIO = json.id;
       
-                      setTimeout(function () {
-                        window.location = "saiba.html";
-                      }, 1000); // apenas para exibir o loading
+                      setTimeout(() => {
+                    window.location = "votacao.html";
+                     }, "2000"); // apenas para exibir o loading
                     });
                   } else {
                     console.log("Houve um erro ao tentar realizar o login!");
