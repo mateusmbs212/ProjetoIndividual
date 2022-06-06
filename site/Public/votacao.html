@@ -29,7 +29,7 @@
         </div>
     <main>
       <div class="containerMain">
-        <div class="graph" style="position: relative; height:40vh; width:40vw">
+        <div class="graph">
           <canvas id="canvas_grafico"></canvas>
         </div>
       </div>
@@ -60,12 +60,12 @@
 
       function plotarGrafico(resposta, idAquario) {
         var dados = {
-          labels: [],
+          labels: [], 
           datasets: [
             {
               label: "Votos",
               borderColor: "black",
-              backgroundColor: "gray",
+              backgroundColor: "white",
               data: [],
             },
           ],

@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+    background-color: #111;
 }
 
 .container .header {
@@ -45,7 +45,7 @@
 }
 
 .containerMain {
-  height: 70%;
+  height: 60%;
   width: 50%;
   border-radius: 20px;
   overflow: hidden;
@@ -53,6 +53,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.301);
 }
 
 .graph {
@@ -62,4 +63,8 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
