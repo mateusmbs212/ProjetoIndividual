@@ -1,7 +1,3 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-/* para workbench - local - desenvolvimento */
 create database JDMCars;
 use JDMCars;
 
@@ -24,3 +20,15 @@ create table usuario (
     email varchar(60), CHECK (email like '%@%'),
     senha VARCHAR (45)
 );
+
+select * from usuario;
+select * from votacao;
+
+select * from votacao join usuario
+	on idVotacao = fkVotacao;
+
+
+
+drop table usuario;
+drop table votacao;
+
